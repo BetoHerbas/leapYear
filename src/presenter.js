@@ -1,15 +1,16 @@
-// import sumar from "./sumador";
+import leapYear from "./leapYear";
 
-// const first = document.querySelector("#primer-numero");
-// const second = document.querySelector("#segundo-numero");
-// const form = document.querySelector("#sumar-form");
-// const div = document.querySelector("#resultado-div");
+const form = document.getElementById("leapYear-form");
+const year = document.getElementById("year");
+const div = document.getElementById("res-div");
 
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-//   const firstNumber = Number.parseInt(first.value);
-//   const secondNumber = Number.parseInt(second.value);
-
-//   div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-// });
+  if(leapYear(year.value)){
+    div.innerHTML = "<p>" + year.value + " is a leap year</p>";
+  }
+  else{
+    div.innerHTML = "<p>" + year.value + " is not a leap year</p>";
+  }
+});
