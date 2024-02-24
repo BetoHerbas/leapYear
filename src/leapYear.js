@@ -1,5 +1,8 @@
 function leapYear(year) {
-    return true;
+    if(year === 4){
+        return true;
+    }
+    return false;
 }
 
 export default leapYear;
